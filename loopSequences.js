@@ -23,13 +23,13 @@ const mix = (a, b) => {
 
   // interweaving their characters up to the length of the shorter string
   while (i < Math.min(a.length, b.length)) {
-    combinedStr = a[i] + b[i]
+    combinedStr += a[i] + b[i]
     i++
   }
   // then appending the remaining characters from the longer string
-  result += a.slice(i) + b.slice(i)
-  return result
+  combinedStr += a.slice(i) + b.slice(i)
+  return combinedStr
 }
 
-
+// export for tests
 module.exports = { squaredSum, mix };

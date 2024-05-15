@@ -13,6 +13,7 @@ const { squaredSum, mix } = require('./loopSequences')
 //   expect().toBe()
 // })
 
+// Problem 1 Tests
 test('Squared sum empty', () => {
   expect(squaredSum([])).toBe(0)
 })
@@ -32,3 +33,24 @@ test('Squared sum 3', () => {
 test('Squared sum 4', () => {
   expect(squaredSum([7,-1,15,0])).toBe(275)
 })
+
+// Problem 2 Tests
+test('Mix is empty', () => {
+  expect(mix('','')).toBe('')
+})
+
+test('Mix Even', () => {
+  expect(mix("hello", "there")).toBe("htehlelroe");
+});
+
+test('Mix 4-4', () => {
+  expect(mix("1234", "abcd")).toBe("1a2b3c4d");
+});
+
+test('Mix 2-4', () => {
+  expect(mix("12", "abcd")).toBe("1a2bcd");
+});
+
+test('Mix 4-2', () => {
+  expect(mix("1234", "ab")).toBe("1a2b34");
+});
