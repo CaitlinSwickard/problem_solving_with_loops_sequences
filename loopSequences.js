@@ -6,9 +6,9 @@
 
 const squaredSum = (array) => {
   let sum = 0;
-  for (let i in array) {
+  for (let i of array) {
     // num * num = new sum = move through array
-    sum += array[i] * array[i];
+    sum += i * i
   }
   return sum;
 }
