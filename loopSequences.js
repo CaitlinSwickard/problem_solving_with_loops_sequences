@@ -13,13 +13,13 @@ const squaredSum = (array) => {
   return sum;
 }
 
+
 // Write a function mix that takes two strings as parameters and returns one string with the 
 // first element from the first string, and the second element from the second string, and every other element thereafter.
 
 const mix = (a, b) => {
   let combinedStr = ''
   let i = 0;
-
 
   // interweaving their characters up to the length of the shorter string
   while (i < Math.min(a.length, b.length)) {
@@ -30,3 +30,6 @@ const mix = (a, b) => {
   result += a.slice(i) + b.slice(i)
   return result
 }
+
+
+module.exports = { squaredSum, mix };
